@@ -1,5 +1,119 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+html {
+  font-size: 10px;
+}
+
 body {
   display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container {
+  max-width: 144rem;
+  margin: 0 auto;
+}
+
+.header {
+  position: absolute;
+  left: 0;
+  top: 1.8rem;
+  width: 100%;
+  z-index: 2;
+}
+.header__container {
+  max-width: 125rem;
+}
+.header__row {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 1.5rem;
+}
+.header__logo {
+  display: flex;
+}
+.header__nav {
+  display: flex;
+  align-items: center;
+}
+.header__nav__link {
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 1.5;
+  color: #FFFFFF;
+  text-decoration: none;
+}
+.header__nav__link:not(:last-child) {
+  margin-right: 3rem;
+}
+
+.main__banner {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  z-index: 1;
+}
+.main__banner__video {
+  min-width: 100%;
+  min-height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+.main__banner__container {
+  z-index: 2;
+}
+.main__banner__content__title {
+  margin: 0 0 2.4rem 0;
+  font-size: 6.4rem;
+  font-weight: 600;
+  color: #FFFFFF;
+  line-height: 1.5;
+  text-align: center;
+}
+.main__banner__content__text {
+  margin: 0 0 2.4rem 0;
+  font-size: 2.4rem;
+  font-weight: 600;
+  color: #FFFFFF;
+  line-height: 1.5;
+}
+.main__banner__content__media {
+  display: flex;
+  justify-content: center;
+}
+.main__banner__content__media__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 4.2rem;
+  height: 4.2rem;
+  border-radius: 50%;
+  background-color: #FFFFFF;
+}
+.main__banner__content__media__item:not(:last-child) {
+  margin-right: 2.4rem;
+}
+.main__banner__content__media__item .media--instagram {
+  width: 2.2rem;
+  height: 2.2rem;
+}
+.main__banner__content__media__item .media--facebook {
+  width: 0.9rem;
+  height: 1.8rem;
+}
+.main__banner__content__media__item .media--github {
+  width: 2.4rem;
+  height: 2.4rem;
 }
 
 /*# sourceMappingURL=index.css.map */

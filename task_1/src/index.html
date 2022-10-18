@@ -5,9 +5,52 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="./scss/index.css" rel="stylesheet">
+    <link 
+        rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css" 
+        integrity="sha512-oHDEc8Xed4hiW6CxD7qjbnI+B07vDdX7hEPTvn9pSZO1bcRqHp8mj9pyr+8RVC2GmtEfI2Bi9Ke9Ass0as+zpg==" 
+        crossorigin="anonymous" 
+        referrerpolicy="no-referrer" 
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     <title>Portfolio</title>
 </head>
 <body>
-    
+    <header class="header">
+        <div class="header__container container">
+            <div class="header__row">
+                <a class="header__logo" href="#">
+                    <img src="./assets/img/logo.svg" alt="logo">
+                </a>
+                <nav class="header__nav">
+                    <a href="#" class="header__nav__link">ABOUT</a>
+                    <a href="#" class="header__nav__link">WHAT I DO</a>
+                    <a href="#" class="header__nav__link">WORK</a>
+                    <a href="#" class="header__nav__link">CONTACT</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <main class="main">
+        <section class="main__banner">
+            <video autoplay loop src="./assets/video/background-video.mp4" class="main__banner__video"></video>
+            <div class="main__banner__container container">
+                <div class="main__banner__content">
+                    <h1 class="main__banner__content__title">I'm Raul iqbal</h1>
+                    <p class="main__banner__content__text">Front-End Development - UI/UX Designer</p>
+                    <div class="main__banner__content__media">
+                        <a href="#" class="main__banner__content__media__item">
+                            <img class="media--instagram" src="./assets/img/inst.svg" alt="instagram">
+                        </a>
+                        <a href="#" class="main__banner__content__media__item">
+                            <img class="media--facebook" src="./assets/img/facebook.svg" alt="facebook">
+                        </a>
+                        <a href="#" class="main__banner__content__media__item">
+                            <img class="media--github" src="./assets/img/git.svg" alt="github">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 </body>
 </html>

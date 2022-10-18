@@ -1,3 +1,140 @@
+$white_font: #FFFFFF;
+$white_background: #FFFFFF;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    font-size: 10px;
+}
+
 body {
     display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container {
+    max-width: 144rem;
+    margin: 0 auto;
+}
+
+.header {
+    position: absolute;
+    left: 0;
+    top: 1.8rem;
+    width: 100%;
+    z-index: 2;
+
+    &__container {
+        max-width: 125rem;
+    }
+
+    &__row {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 1.5rem;
+    }
+
+    &__logo {
+        display: flex;
+    }
+
+    &__nav {
+        display: flex;
+        align-items: center;
+
+        &__link {
+            font-size: 1.8rem;
+            font-weight: 600;
+            line-height: 1.5;
+            color: $white_font;
+            text-decoration: none;
+
+            &:not(:last-child) {
+                margin-right: 3rem;
+            }
+        }
+    }
+}
+
+.main {
+    &__banner {
+        position: relative;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        z-index: 1;
+
+        &__video {
+            min-width: 100%;
+            min-height: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 0;
+        }
+
+        &__container {
+            z-index: 2;
+        }
+
+        &__content {
+            &__title {
+                margin: 0 0 2.4rem 0;
+                font-size: 6.4rem;
+                font-weight: 600;
+                color: $white_font;
+                line-height: 1.5;
+                text-align: center;
+            }
+
+            &__text {
+                margin: 0 0 2.4rem 0;
+                font-size: 2.4rem;
+                font-weight: 600;
+                color: $white_font;
+                line-height: 1.5;
+            }
+
+            &__media {
+                display: flex;
+                justify-content: center;
+
+                &__item {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 4.2rem;
+                    height: 4.2rem;
+                    border-radius: 50%;
+                    background-color: $white_background;
+
+                    &:not(:last-child) {
+                        margin-right: 2.4rem;
+                    }
+
+                    & .media--instagram {
+                        width: 2.2rem;
+                        height: 2.2rem;
+                    }
+
+                    & .media--facebook {
+                        width: 0.9rem;
+                        height: 1.8rem;
+                    }
+
+                    & .media--github {
+                        width: 2.4rem;
+                        height: 2.4rem;
+                    }
+                }
+            }
+        }
+    }
 }
