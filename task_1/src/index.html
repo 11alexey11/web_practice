@@ -12,6 +12,7 @@
         referrerpolicy="no-referrer" 
     />
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
     <title>Portfolio</title>
 </head>
 <body>
@@ -73,7 +74,7 @@
                 <div class="main__specializing__content">
                     <p class="main__specializing__content__subtitle">WHAT I DO</p>
                     <h2 class="main__specializing__content__title">Specializing in</h2>
-                    <div class="main__specializing__content__cards">
+                    <div class="main__specializing__content__cards swiper">
                         <div class="main__specializing__content__cards__item">
                             <div class="main__specializing__content__cards__item__head">
                                 <img class="main__specializing__content__cards__item__head__img" src="./assets/img/frontend_icon.svg" alt="frontend">
@@ -92,6 +93,41 @@
                 </div>
             </div>
         </section>
+        <section class="main__portfolio">
+            <div class="main__portfolio__container container">
+                <div class="main__portfolio__content">
+                    <p class="main__portfolio__content__subtitle">PORTFOLIO</p>
+                    <h2 class="main__portfolio__content__title">Latest projects</h2>
+                    <div class="main__portfolio__content__cards">
+                        <div class="main__portfolio__content__cards__item">
+                            <img src="./assets/img/food.svg" alt="food">
+                            <div class="main__portfolio__content__cards__item__content">
+                                <p class="main__portfolio__content__cards__item__content__title">Need Food App Design</p>
+                                <input class="main__portfolio__content__cards__item__content__input" type="button"
+                                    value="View Demo">
+                            </div>
+                        </div>
+                        <div class="main__portfolio__content__cards__item">
+                            <img src="./assets/img/cafe.svg" alt="cafe">
+                            <div class="main__portfolio__content__cards__item__content">
+                                <p class="main__portfolio__content__cards__item__content__title">Cafe Street Web Design</p>
+                                <input class="main__portfolio__content__cards__item__content__input" type="button"
+                                    value="View Demo">
+                            </div>
+                        </div>
+                        <div class="main__portfolio__content__cards__item">
+                            <img src="./assets/img/travel.svg" alt="travel">
+                            <div class="main__portfolio__content__cards__item__content">
+                                <p class="main__portfolio__content__cards__item__content__title">Travel App Design</p>
+                                <input class="main__portfolio__content__cards__item__content__input" type="button"
+                                    value="View Demo">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </section>
     </main>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 </body>
 </html>

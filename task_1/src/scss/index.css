@@ -157,7 +157,7 @@ body {
   font-size: 2.4rem;
   font-weight: 600;
   line-height: 1.5;
-  letter-spacing: 0.1rem;
+  letter-spacing: 0.1em;
   color: #4C70EF;
 }
 .main__about__content__item__title {
@@ -195,7 +195,7 @@ body {
   font-size: 2.4rem;
   font-weight: 600;
   line-height: 1.5;
-  letter-spacing: 0.1rem;
+  letter-spacing: 0.1em;
   color: #4C70EF;
 }
 .main__specializing__content__title {
@@ -204,7 +204,9 @@ body {
   font-size: 3.6rem;
   font-weight: 600;
   line-height: 1.5;
+  letter-spacing: 0.1em;
   color: #FFFFFF;
+  text-transform: uppercase;
 }
 .main__specializing__content__cards {
   display: flex;
@@ -235,6 +237,63 @@ body {
   font-size: 1.8rem;
   line-height: 1.5;
   color: #B0ADAD;
+}
+
+.main__portfolio {
+  position: relative;
+  padding: 6rem 0;
+  background-color: #212121;
+  z-index: 1;
+}
+.main__portfolio__container {
+  max-width: 118rem;
+}
+.main__portfolio__content {
+  display: flex;
+  flex-direction: column;
+}
+.main__portfolio__content__subtitle {
+  margin-bottom: 1.2rem;
+  text-align: center;
+  font-size: 2.4rem;
+  font-weight: 600;
+  line-height: 1.5;
+  letter-spacing: 0.1em;
+  color: #4C70EF;
+}
+.main__portfolio__content__title {
+  margin-bottom: 3.2rem;
+  text-align: center;
+  font-size: 3.6rem;
+  font-weight: 600;
+  line-height: 1.5;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+.main__portfolio__content__cards {
+  display: flex;
+  gap: 2rem;
+}
+.main__portfolio__content__cards__item {
+  background-color: #292C36;
+  border-radius: 1.2rem;
+}
+.main__portfolio__content__cards__item__content {
+  padding: 2rem 2.4rem;
+}
+.main__portfolio__content__cards__item__content__title {
+  margin-bottom: 1.2rem;
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1.5;
+  color: #FFFFFF;
+}
+.main__portfolio__content__cards__item__content__input {
+  padding: 1rem 1.8rem;
+  border-radius: 0.6rem;
+  background-color: #558FFF;
+  color: #FFFFFF;
 }
 
 /*# sourceMappingURL=index.css.map */

@@ -4,6 +4,7 @@ $grey_font: #B0ADAD;
 $white_background: #FFFFFF;
 $dark_background: #212121;
 $blue_background: #292C36;
+$light_blue_background: #558FFF;
 
 * {
     margin: 0;
@@ -185,7 +186,7 @@ body {
                 font-size: 2.4rem;
                 font-weight: 600;
                 line-height: 1.5;
-                letter-spacing: 0.1rem;
+                letter-spacing: 0.1em;
                 color: $blue_font;
             }
 
@@ -230,7 +231,7 @@ body {
             font-size: 2.4rem;
             font-weight: 600;
             line-height: 1.5;
-            letter-spacing: 0.1rem;
+            letter-spacing: 0.1em;
             color: $blue_font;
         }
 
@@ -240,7 +241,9 @@ body {
             font-size: 3.6rem;
             font-weight: 600;
             line-height: 1.5;
+            letter-spacing: 0.1em;
             color: $white_font;
+            text-transform: uppercase;
         }
 
         &__cards {
@@ -274,6 +277,72 @@ body {
                     font-size: 1.8rem;
                     line-height: 1.5;
                     color: $grey_font;
+                }
+            }
+        }
+    }
+}
+
+.main__portfolio {
+    position: relative;
+    padding: 6rem 0;
+    background-color: $dark_background;
+    z-index: 1;
+
+    &__container {
+        max-width: 118rem;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+
+        &__subtitle {
+            margin-bottom: 1.2rem;
+            text-align: center;
+            font-size: 2.4rem;
+            font-weight: 600;
+            line-height: 1.5;
+            letter-spacing: 0.1em;
+            color: $blue_font;
+        }
+
+        &__title {
+            margin-bottom: 3.2rem;
+            text-align: center;
+            font-size: 3.6rem;
+            font-weight: 600;
+            line-height: 1.5;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: $white_font;
+        }
+
+        &__cards {
+            display: flex;
+            gap: 2rem;
+
+            &__item {
+                background-color: $blue_background;
+                border-radius: 1.2rem;
+
+                &__content {
+                    padding: 2rem 2.4rem;
+
+                    &__title {
+                        margin-bottom: 1.2rem;
+                        font-size: 2rem;
+                        font-weight: 600;
+                        line-height: 1.5;
+                        color: $white_font;
+                    }
+
+                    &__input {
+                        padding: 1rem 1.8rem;
+                        border-radius: 0.6rem;
+                        background-color: $light_blue_background;
+                        color: $white_font;
+                    }
                 }
             }
         }
