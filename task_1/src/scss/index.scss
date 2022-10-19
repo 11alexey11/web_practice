@@ -286,7 +286,7 @@ body {
 
 .main__portfolio {
     position: relative;
-    padding: 6rem 0;
+    padding: 6rem 0 12rem;
     background-color: $dark_background;
     z-index: 1;
 
@@ -397,6 +397,35 @@ body {
             &:hover {
                 cursor: pointer;
             }
+        }
+    }
+}
+
+.footer {
+    width: 100%;
+    padding: 4.4rem 0 3.2rem;
+    background-color: $blue_background;
+    z-index: 2;
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        
+        &__logo {
+            margin-bottom: 0.8rem;
+            font-size: 3.2rem;
+            font-weight: 700;
+            line-height: 1.5;
+            text-align: center;
+            color: $white_font;
+        }
+
+        &__copyright {
+            font-size: 1.6rem;
+            font-weight: 700;
+            line-height: 1.5;
+            text-align: center;
+            color: $white_font;
         }
     }
 }
