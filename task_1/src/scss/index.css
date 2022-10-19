@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  outline: none;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
@@ -291,9 +292,54 @@ body {
 }
 .main__portfolio__content__cards__item__content__input {
   padding: 1rem 1.8rem;
+  border: 0;
   border-radius: 0.6rem;
   background-color: #558FFF;
   color: #FFFFFF;
+  font-size: 1.4rem;
+  font-weight: 600;
+  line-height: 1.5;
+}
+.main__portfolio__content__cards__item__content__input:hover {
+  cursor: pointer;
+}
+
+.main__contact {
+  position: relative;
+  padding: 6rem 0;
+  background-color: #212121;
+  z-index: 1;
+}
+.main__contact__container {
+  max-width: 98rem;
+}
+.main__contact__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 7.8rem 0;
+  border-radius: 1.2rem;
+  background-color: #292C36;
+}
+.main__contact__content__title {
+  margin-bottom: 3.2rem;
+  font-size: 3.2rem;
+  font-weight: 600;
+  line-height: 1.5;
+  color: #FFFFFF;
+}
+.main__contact__content__connect__input {
+  padding: 1rem 1.8rem;
+  border: 0;
+  border-radius: 0.6rem;
+  background-color: #558FFF;
+  color: #FFFFFF;
+  font-size: 1.4rem;
+  font-weight: 600;
+  line-height: 1.5;
+}
+.main__contact__content__connect__input:hover {
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=index.css.map */
