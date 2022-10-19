@@ -120,7 +120,6 @@ body {
 }
 
 .main__about {
-  display: flex;
   position: relative;
   padding: 10.6rem 0 6.25rem;
   background-color: #212121;
@@ -168,7 +167,71 @@ body {
   line-height: 1.5;
   color: #FFFFFF;
 }
-.main__about__content__item__text {
+.main__about__content__item__desc__text {
+  font-size: 1.8rem;
+  line-height: 1.5;
+  color: #B0ADAD;
+}
+.main__about__content__item__desc__text:first-child {
+  margin-bottom: 1.6rem;
+}
+
+.main__specializing {
+  position: relative;
+  padding: 6.25rem 0 6rem;
+  background-color: #212121;
+  z-index: 1;
+}
+.main__specializing__container {
+  max-width: 98rem;
+}
+.main__specializing__content {
+  display: flex;
+  flex-direction: column;
+}
+.main__specializing__content__subtitle {
+  margin-bottom: 1.2rem;
+  text-align: center;
+  font-size: 2.4rem;
+  font-weight: 600;
+  line-height: 1.5;
+  letter-spacing: 0.1rem;
+  color: #4C70EF;
+}
+.main__specializing__content__title {
+  margin-bottom: 5.1rem;
+  text-align: center;
+  font-size: 3.6rem;
+  font-weight: 600;
+  line-height: 1.5;
+  color: #FFFFFF;
+}
+.main__specializing__content__cards {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+}
+.main__specializing__content__cards__item {
+  padding: 2.7rem 2.4rem 2.1rem;
+  border-radius: 1.2rem;
+  background-color: #292C36;
+}
+.main__specializing__content__cards__item__head {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+  padding-left: 2rem;
+  margin-bottom: 3.2rem;
+}
+.main__specializing__content__cards__item__head__title {
+  display: flex;
+  flex-direction: column;
+  font-size: 2.4rem;
+  font-weight: 600;
+  line-height: 1.5;
+  color: #FFFFFF;
+}
+.main__specializing__content__cards__item__text {
   font-size: 1.8rem;
   line-height: 1.5;
   color: #B0ADAD;
