@@ -1,5 +1,8 @@
 $white_font: #FFFFFF;
+$blue_font: #4C70EF;
+$grey_font: #B0ADAD;
 $white_background: #FFFFFF;
+$dark_background: #212121;
 
 * {
     margin: 0;
@@ -24,7 +27,7 @@ body {
 }
 
 .header {
-    position: absolute;
+    position: sticky;
     left: 0;
     top: 1.8rem;
     width: 100%;
@@ -63,77 +66,141 @@ body {
 }
 
 .main {
-    &__banner {
-        position: relative;
-        width: 100vw;
-        height: 100vh;
+    width: 100%;
+}
+
+.main__banner {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+
+    &__video {
+        min-width: 100%;
+        min-height: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 0;
+    }
+
+    &__container {
+        z-index: 2;
+    }
+
+    &__content {
+        &__title {
+            margin: 0 0 2.4rem 0;
+            font-size: 6.4rem;
+            font-weight: 600;
+            color: $white_font;
+            line-height: 1.5;
+            text-align: center;
+        }
+
+        &__text {
+            margin: 0 0 2.4rem 0;
+            font-size: 2.4rem;
+            font-weight: 600;
+            color: $white_font;
+            line-height: 1.5;
+        }
+
+        &__media {
+            display: flex;
+            justify-content: center;
+
+            &__item {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 4.2rem;
+                height: 4.2rem;
+                border-radius: 50%;
+                background-color: $white_background;
+
+                &:not(:last-child) {
+                    margin-right: 2.4rem;
+                }
+
+                & .media--instagram {
+                    width: 2.2rem;
+                    height: 2.2rem;
+                }
+
+                & .media--facebook {
+                    width: 0.9rem;
+                    height: 1.8rem;
+                }
+
+                & .media--github {
+                    width: 2.4rem;
+                    height: 2.4rem;
+                }
+        }
+        }
+    }
+}
+
+.main__about {
+    display: flex;
+    position: relative;
+    padding: 10.6rem 0 6.25rem;
+    background-color: $dark_background;
+    z-index: 1;
+
+    &__container {
+        max-width: 118rem;
+    }
+
+    &__content {
         display: flex;
-        align-items: center;
-        z-index: 1;
+        gap: 7.4rem;
 
-        &__video {
-            min-width: 100%;
-            min-height: 100%;
-            position: fixed;
-            top: 0;
-            left: 0;
-            z-index: 0;
-        }
+        &__item {
+            position: relative;
+            z-index: 1;
 
-        &__container {
-            z-index: 2;
-        }
+            &:first-child::after {
+                content: '';
+                position: absolute;
+                width: calc(100% - 2.7rem);
+                height: calc(100% - 2.6rem);
+                bottom: 0;
+                right: -2.7rem;
+                border-radius: 2.4rem 0;
+                border: 0.2rem solid $white_font;
+                z-index: -1;
+            }
+            
+            &:last-child {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
 
-        &__content {
-            &__title {
-                margin: 0 0 2.4rem 0;
-                font-size: 6.4rem;
+            &__subtitle {
+                margin-bottom: 1.2rem;
+                font-size: 2.4rem;
                 font-weight: 600;
-                color: $white_font;
                 line-height: 1.5;
-                text-align: center;
+                letter-spacing: 0.1rem;
+                color: $blue_font;
+            }
+
+            &__title {
+                margin-bottom: 3.2rem;
+                font-size: 3.6rem;
+                font-weight: 600;
+                line-height: 1.5;
+                color: $white_font;
             }
 
             &__text {
-                margin: 0 0 2.4rem 0;
-                font-size: 2.4rem;
-                font-weight: 600;
-                color: $white_font;
+                font-size: 1.8rem;
                 line-height: 1.5;
-            }
-
-            &__media {
-                display: flex;
-                justify-content: center;
-
-                &__item {
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    width: 4.2rem;
-                    height: 4.2rem;
-                    border-radius: 50%;
-                    background-color: $white_background;
-
-                    &:not(:last-child) {
-                        margin-right: 2.4rem;
-                    }
-
-                    & .media--instagram {
-                        width: 2.2rem;
-                        height: 2.2rem;
-                    }
-
-                    & .media--facebook {
-                        width: 0.9rem;
-                        height: 1.8rem;
-                    }
-
-                    & .media--github {
-                        width: 2.4rem;
-                        height: 2.4rem;
-                    }
-                }
+                color: $grey_font;
             }
         }
     }

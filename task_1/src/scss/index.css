@@ -21,7 +21,7 @@ body {
 }
 
 .header {
-  position: absolute;
+  position: sticky;
   left: 0;
   top: 1.8rem;
   width: 100%;
@@ -53,12 +53,15 @@ body {
   margin-right: 3rem;
 }
 
+.main {
+  width: 100%;
+}
+
 .main__banner {
-  position: relative;
-  width: 100vw;
   height: 100vh;
   display: flex;
   align-items: center;
+  position: relative;
   z-index: 1;
 }
 .main__banner__video {
@@ -114,6 +117,61 @@ body {
 .main__banner__content__media__item .media--github {
   width: 2.4rem;
   height: 2.4rem;
+}
+
+.main__about {
+  display: flex;
+  position: relative;
+  padding: 10.6rem 0 6.25rem;
+  background-color: #212121;
+  z-index: 1;
+}
+.main__about__container {
+  max-width: 118rem;
+}
+.main__about__content {
+  display: flex;
+  gap: 7.4rem;
+}
+.main__about__content__item {
+  position: relative;
+  z-index: 1;
+}
+.main__about__content__item:first-child::after {
+  content: "";
+  position: absolute;
+  width: calc(100% - 2.7rem);
+  height: calc(100% - 2.6rem);
+  bottom: 0;
+  right: -2.7rem;
+  border-radius: 2.4rem 0;
+  border: 0.2rem solid #FFFFFF;
+  z-index: -1;
+}
+.main__about__content__item:last-child {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.main__about__content__item__subtitle {
+  margin-bottom: 1.2rem;
+  font-size: 2.4rem;
+  font-weight: 600;
+  line-height: 1.5;
+  letter-spacing: 0.1rem;
+  color: #4C70EF;
+}
+.main__about__content__item__title {
+  margin-bottom: 3.2rem;
+  font-size: 3.6rem;
+  font-weight: 600;
+  line-height: 1.5;
+  color: #FFFFFF;
+}
+.main__about__content__item__text {
+  font-size: 1.8rem;
+  line-height: 1.5;
+  color: #B0ADAD;
 }
 
 /*# sourceMappingURL=index.css.map */
