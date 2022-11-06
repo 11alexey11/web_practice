@@ -131,18 +131,24 @@ body {
 }
 .main__about__content {
   display: flex;
+  align-items: center;
   gap: 7.4rem;
 }
 .main__about__content__item {
+  width: 50%;
   position: relative;
   z-index: 1;
+}
+.main__about__content__item__img {
+  width: 100%;
+  height: 100%;
 }
 .main__about__content__item:first-child::after {
   content: "";
   position: absolute;
   width: calc(100% - 2.7rem);
   height: calc(100% - 2.6rem);
-  bottom: 0;
+  bottom: -2.7rem;
   right: -2.7rem;
   border-radius: 2.4rem 0;
   border: 0.2rem solid #FFFFFF;
@@ -209,12 +215,17 @@ body {
   color: #FFFFFF;
   text-transform: uppercase;
 }
+.main__specializing__content__title__item {
+  font-size: 2.4rem;
+}
 .main__specializing__content__cards {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   gap: 2rem;
 }
 .main__specializing__content__cards__item {
+  width: 50%;
   padding: 2.7rem 2.4rem 2.1rem;
   border-radius: 1.2rem;
   background-color: #292C36;
@@ -275,10 +286,15 @@ body {
 .main__portfolio__content__cards {
   display: flex;
   gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 .main__portfolio__content__cards__item {
   background-color: #292C36;
   border-radius: 1.2rem;
+}
+.main__portfolio__content__cards__item__img {
+  width: 100%;
 }
 .main__portfolio__content__cards__item__content {
   padding: 2rem 2.4rem;
@@ -366,6 +382,37 @@ body {
   line-height: 1.5;
   text-align: center;
   color: #FFFFFF;
+}
+
+@media screen and (max-width: 1200px) {
+  .main__about__content {
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 600px) {
+  html {
+    font-size: 8px;
+  }
+
+  .main__specializing__content__cards {
+    flex-direction: column;
+  }
+  .main__specializing__content__cards__item__head {
+    flex-wrap: wrap;
+  }
+}
+@media screen and (max-width: 450px) {
+  html {
+    font-size: 6px;
+  }
+
+  .header__nav__link:not(:last-child) {
+    margin-right: 1rem;
+  }
+
+  .main__portfolio__content__cards__item {
+    width: 80%;
+  }
 }
 
 /*# sourceMappingURL=index.css.map */

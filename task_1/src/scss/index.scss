@@ -158,18 +158,25 @@ body {
 
     &__content {
         display: flex;
+        align-items: center;
         gap: 7.4rem;
 
         &__item {
+            width: 50%;
             position: relative;
             z-index: 1;
+
+            &__img {
+                width: 100%;
+                height: 100%;
+            }
 
             &:first-child::after {
                 content: '';
                 position: absolute;
                 width: calc(100% - 2.7rem);
                 height: calc(100% - 2.6rem);
-                bottom: 0;
+                bottom: -2.7rem;
                 right: -2.7rem;
                 border-radius: 2.4rem 0;
                 border: 0.2rem solid $white_font;
@@ -245,14 +252,20 @@ body {
             letter-spacing: 0.1em;
             color: $white_font;
             text-transform: uppercase;
+
+            &__item {
+                font-size: 2.4rem;
+            }
         }
 
         &__cards {
             display: flex;
             justify-content: space-between;
+            align-items: center;
             gap: 2rem;
 
             &__item {
+                width: 50%;
                 padding: 2.7rem 2.4rem 2.1rem;
                 border-radius: 1.2rem;
                 background-color: $blue_background;
@@ -322,10 +335,16 @@ body {
         &__cards {
             display: flex;
             gap: 2rem;
+            flex-wrap: wrap;
+            justify-content: center;
 
             &__item {
                 background-color: $blue_background;
                 border-radius: 1.2rem;
+
+                &__img {
+                    width: 100%;
+                }
 
                 &__content {
                     padding: 2rem 2.4rem;
@@ -426,6 +445,48 @@ body {
             line-height: 1.5;
             text-align: center;
             color: $white_font;
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .main {
+        &__about__content {
+            flex-direction: column;
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    html {
+        font-size: 8px;
+    }
+
+    .main {
+        &__specializing__content__cards {
+            flex-direction: column;
+
+            &__item__head {
+                flex-wrap: wrap;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 450px) {
+    html {
+        font-size: 6px;
+    }
+
+    .header__nav__link:not(:last-child) {
+        margin-right: 1rem;
+    }
+
+    .main {
+        &__portfolio__content__cards {
+            &__item {
+                width: 80%;
+            }
         }
     }
 }
