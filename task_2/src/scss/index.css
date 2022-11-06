@@ -1,0 +1,486 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+  outline: none;
+}
+
+html {
+  font-size: 10px;
+  background-color: #151719;
+}
+
+.waves {
+  position: relative;
+  z-index: 0;
+}
+.waves__container {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.container {
+  max-width: 111.8rem;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 0.7rem 0 0.7rem;
+}
+.header__nav {
+  display: flex;
+  gap: 4.7rem;
+}
+.header__nav > a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  text-decoration: none;
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
+.header__nav > a:hover {
+  cursor: pointer;
+}
+.header__nav__docs {
+  color: #C5D2DC;
+}
+.header__nav__sign-up {
+  color: #FFFFFF;
+  padding: 0.8rem 2rem;
+  background-color: #5D5DFF;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.main__template {
+  max-width: 78.2rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10rem 0.7rem 3.2rem 0.7rem;
+}
+.main__template__title {
+  margin: 0 0 1.6rem;
+  font-size: 5.2rem;
+  font-weight: 800;
+  color: #FFFFFF;
+  letter-spacing: -0.05rem;
+  text-align: center;
+  line-height: 1.19;
+}
+.main__template__content {
+  padding: 0 5.4rem;
+  font-size: 2rem;
+  color: #9BA9B4;
+  letter-spacing: -0.025rem;
+  text-align: center;
+  margin-bottom: 3.2rem;
+  line-height: 1.5;
+}
+.main__template__btns {
+  display: flex;
+  gap: 1.2rem;
+}
+.main__template__btns > a {
+  padding: 1.2rem 3.2rem;
+  font-size: 1.6rem;
+  text-decoration: none;
+  line-height: 1.5;
+}
+.main__template__btns > a:hover {
+  cursor: pointer;
+}
+.main__template__btns__start {
+  color: #FFFFFF;
+  background-color: #5D5DFF;
+}
+.main__template__btns__learn {
+  color: #C5D2DC;
+  background-color: #33363A;
+}
+.main__video {
+  max-width: 103.8rem;
+  padding: 3.2rem 0.7rem 6.4rem 0.7rem;
+  width: 100%;
+}
+.main__video__img {
+  width: 100%;
+}
+.main__build {
+  display: flex;
+  flex-direction: column;
+  padding: 3.2rem 0.7rem 0;
+}
+.main__build__title {
+  margin-bottom: 1.7rem;
+  font-size: 4rem;
+  font-weight: 800;
+  color: #D9E3EA;
+  text-align: center;
+  letter-spacing: -0.05rem;
+  line-height: 1.25;
+}
+.main__build__content {
+  padding: 0 13.4rem;
+  font-size: 2rem;
+  color: #9BA9B4;
+  text-align: center;
+  letter-spacing: -0.025rem;
+  line-height: 1.5;
+}
+.main__build__cards {
+  margin-top: 8rem;
+  padding-bottom: 8rem;
+  display: flex;
+  justify-content: center;
+  gap: 6.4rem;
+  flex-wrap: wrap;
+  border-bottom: 1px solid #33363A;
+}
+.main__build__cards__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.6rem;
+  max-width: 32.5rem;
+  width: 100%;
+}
+.main__build__cards__item__img {
+  width: 6.4rem;
+  height: 6.4rem;
+}
+.main__build__cards__item__content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+.main__build__cards__item__content__title {
+  font-size: 2.4rem;
+  color: #D9E3EA;
+  line-height: 1.42;
+  letter-spacing: -0.025rem;
+  text-align: center;
+}
+.main__build__cards__item__content__text {
+  font-size: 1.8rem;
+  line-height: 1.5;
+  letter-spacing: -0.025rem;
+  color: #9BA9B4;
+  text-align: center;
+}
+.main__product {
+  display: flex;
+  flex-direction: column;
+  padding: 8rem 0.7rem 0;
+}
+.main__product__goals {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+.main__product__goals__btn {
+  padding: 0.4rem 1.2rem;
+  border-radius: 1.5rem;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #36A269;
+  text-decoration: none;
+  line-height: 1.57;
+  background-color: #C6F6D5;
+}
+.main__product__goals__btn:hover {
+  cursor: pointer;
+}
+.main__product__title {
+  margin-bottom: 1.6rem;
+  font-size: 4rem;
+  font-weight: 800;
+  color: #D9E3EA;
+  text-align: center;
+  letter-spacing: -0.05rem;
+  line-height: 1.25;
+}
+.main__product__content {
+  margin-bottom: 8rem;
+  padding: 0 20rem;
+  font-size: 2rem;
+  color: #9BA9B4;
+  text-align: center;
+  letter-spacing: -0.025rem;
+  line-height: 1.5;
+}
+.main__product__cards {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 8rem;
+  gap: 8rem;
+  border-bottom: 1px solid #33363A;
+}
+.main__product__cards__item {
+  display: flex;
+  justify-content: center;
+  gap: 6.4rem;
+}
+.main__product__cards__item__content {
+  display: flex;
+  flex-direction: column;
+  margin-top: 5.7rem;
+}
+.main__product__cards__item__content__subtitle {
+  margin-bottom: 0.8rem;
+  font-family: "Architects Daughter", "cursive";
+  font-size: 2rem;
+  color: #5D5DFF;
+  letter-spacing: -0.025rem;
+  line-height: 1.5;
+}
+.main__product__cards__item__content__title {
+  margin-bottom: 0.9rem;
+  font-size: 3.2rem;
+  font-weight: 700;
+  color: #D9E3EA;
+  letter-spacing: -0.025rem;
+  line-height: 1.31;
+}
+.main__product__cards__item__content__text {
+  margin-bottom: 1.6rem;
+  font-size: 2rem;
+  color: #9BA9B4;
+  letter-spacing: -0.025rem;
+  line-height: 1.5;
+}
+.main__product__cards__item__content__row {
+  list-style-type: none;
+}
+.main__product__cards__item__content__row__text {
+  margin-left: 0.8rem;
+  font-size: 1.8rem;
+  letter-spacing: -0.025rem;
+  color: #9BA9B4;
+  line-height: 1.5;
+}
+.main__product__cards__item__schedule {
+  max-width: 54rem;
+  max-height: 40.5rem;
+  width: 100%;
+  height: 100%;
+}
+.main__product__cards__item__schedule__img {
+  width: 100%;
+  height: 100%;
+}
+.main__testimonials {
+  display: flex;
+  flex-direction: column;
+  padding: 8rem 0.7rem 4rem;
+}
+.main__testimonials__title {
+  margin-bottom: 1.6rem;
+  font-size: 4rem;
+  font-weight: 800;
+  color: #D9E3EA;
+  letter-spacing: -0.05rem;
+  text-align: center;
+  line-height: 1.25;
+}
+.main__testimonials__content {
+  padding: 0 18rem;
+  margin-bottom: 8rem;
+  font-size: 2rem;
+  color: #9BA9B4;
+  letter-spacing: -0.025rem;
+  text-align: center;
+  line-height: 1.5;
+}
+.main__testimonials__cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2.4rem;
+}
+.main__testimonials__cards__item {
+  max-width: 35.2rem;
+  width: 100%;
+  padding: 2.4rem 2.4rem 2rem;
+  background-color: #25282C;
+}
+.main__testimonials__cards__item__content {
+  padding: 1.6rem 0 2.4rem;
+  border-bottom: 1px solid #33363A;
+  font-size: 1.8rem;
+  color: #9BA9B4;
+  letter-spacing: -0.025rem;
+  line-height: 1.5;
+}
+.main__testimonials__cards__item__contacts {
+  padding-top: 2rem;
+}
+.main__testimonials__cards__item__contacts:nth-child(n) {
+  font-size: 1.6rem;
+  font-weight: 500;
+  letter-spacing: -0.025rem;
+  line-height: 1.5;
+}
+.main__testimonials__cards__item__contacts__initials {
+  color: #D9E3EA;
+}
+.main__testimonials__cards__item__contacts__slash {
+  color: #33363A;
+}
+.main__testimonials__cards__item__contacts__prof {
+  color: #5D5DFF;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  padding: 4rem 0.7rem 6.3rem;
+}
+.footer__subscribe {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  padding: 6.5rem 4.8rem 6.4rem;
+  margin-bottom: 6.4rem;
+  background-color: #5D5DFF;
+}
+.footer__subscribe__content {
+  display: flex;
+  flex-direction: column;
+}
+.footer__subscribe__content__title {
+  margin-bottom: 0.8rem;
+  font-size: 3.2rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  letter-spacing: -0.025rem;
+  line-height: 1.31;
+}
+.footer__subscribe__content__text {
+  font-size: 1.8rem;
+  color: #E2E1FF;
+  letter-spacing: -0.025rem;
+  line-height: 1.5;
+}
+.footer__subscribe__form {
+  display: flex;
+  gap: 0.8rem;
+  z-index: 1;
+}
+.footer__subscribe__form__email {
+  min-width: 32rem;
+  width: 100%;
+  padding: 1.2rem 1.6rem;
+  font-size: 1.6rem;
+  letter-spacing: -0.025rem;
+  line-height: 1.5;
+}
+.footer__subscribe__form__email::placeholder {
+  color: #ABABFF;
+}
+.footer__subscribe__form__submit {
+  padding: 1.2rem 3.2rem;
+  font-size: 1.6rem;
+  color: #5D5DFF;
+  letter-spacing: -0.025rem;
+  line-height: 1.5;
+}
+.footer__subscribe__form__submit:hover {
+  cursor: pointer;
+}
+.footer__subscribe__fill {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 0;
+}
+.footer__contacts {
+  display: flex;
+  flex-direction: column;
+}
+.footer__contacts__resources {
+  display: flex;
+  gap: 16.9rem;
+  margin-bottom: 4.8rem;
+}
+.footer__contacts__resources__item {
+  display: flex;
+}
+.footer__contacts__resources__item__logo {
+  display: flex;
+  flex-direction: column;
+}
+.footer__contacts__resources__item__logo__img {
+  width: 3.2rem;
+  height: 3.2rem;
+}
+.footer__contacts__resources__item__logo__content {
+  max-width: 35.2rem;
+  width: 100%;
+  margin-top: 1.4rem;
+  font-size: 1.6rem;
+  color: #9BA9B4;
+  letter-spacing: -0.025rem;
+  line-height: 1.5;
+}
+.footer__contacts__resources__item__products, .footer__contacts__resources__item__resources, .footer__contacts__resources__item__company {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+.footer__contacts__resources__item__products__content, .footer__contacts__resources__item__resources__content, .footer__contacts__resources__item__company__content {
+  font-size: 1.4rem;
+  color: #9BA9B4;
+  line-height: 1.57;
+}
+.footer__contacts__resources__item__products__content:first-child, .footer__contacts__resources__item__resources__content:first-child, .footer__contacts__resources__item__company__content:first-child {
+  color: #D9E3EA;
+}
+.footer__contacts__resources__item:last-child {
+  gap: 8rem;
+}
+.footer__contacts__links {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.footer__contacts__links__rights {
+  font-size: 1.4rem;
+  color: #9BA9B4;
+  line-height: 1.57;
+}
+.footer__contacts__links__media {
+  display: flex;
+  gap: 1.6rem;
+}
+
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 8px;
+  }
+}
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 6px;
+  }
+}
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 5px;
+  }
+}
+
+/*# sourceMappingURL=index.css.map */
