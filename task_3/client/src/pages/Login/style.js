@@ -1,7 +1,6 @@
 import styled from '@emotion/styled';
-import { Link } from 'react-router-dom';
 
-export const HomeContainerStyled = styled.div({
+export const LoginContainerStyled = styled.div({
     display: 'flex',
     flexDirection: 'column',
     gap: '3rem',
@@ -11,6 +10,6 @@ export const HomeContainerStyled = styled.div({
     height: '100%',
 });
 
-export const HomeHeaderStyled = styled.div({
+export const LoginHeaderStyled = styled.div({
     fontSize: '3.2rem',
 });

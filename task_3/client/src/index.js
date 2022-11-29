@@ -6,7 +6,7 @@ import {
     Route,
     Navigate
   } from "react-router-dom";
-import { Home } from './pages/Home';
+import { Login } from './pages/Login';
 
 const GlobalStyles = css`
     * {
@@ -14,6 +14,7 @@ const GlobalStyles = css`
         padding: 0;
         box-sizing: border-box;
         font-family: 'Roboto', sans-serif;
+        outline: none;
     }
 
     html, body, #root {
@@ -36,7 +37,7 @@ root.render(
     <BrowserRouter>
         <Global styles={GlobalStyles} />
         <Routes>
-            <Route path='/' element={<Home />} />
+            <Route path='/' element={<Login />} />
             {/* <Route path='*' element={<Navigate to='/' replace />} /> */}
         </Routes>
     </BrowserRouter>
