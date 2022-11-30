@@ -5,8 +5,9 @@ import {
     Routes,
     Route,
     Navigate
-  } from "react-router-dom";
+  } from 'react-router-dom';
 import { Login } from './pages/Login';
+import { Todos } from './pages/Todos';
 
 const GlobalStyles = css`
     * {
@@ -38,6 +39,7 @@ root.render(
         <Global styles={GlobalStyles} />
         <Routes>
             <Route path='/' element={<Login />} />
+            <Route path='/todos' element={<Todos />} />
             {/* <Route path='*' element={<Navigate to='/' replace />} /> */}
         </Routes>
     </BrowserRouter>

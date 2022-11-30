@@ -21,7 +21,7 @@ const Login = () => {
 
     const handleOnClick = useCallback(() => {
         localStorage.setItem('user', user);
-        navigate('/todo');
+        navigate('/todos');
     }, [navigate, user]);
 
     return (
