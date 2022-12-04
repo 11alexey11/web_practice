@@ -1,11 +1,19 @@
 import { useCallback, useState } from 'react';
 import { useEffect, useMemo } from 'react';
 
-import { ListContainerStyled } from './style';
+import { Button } from '../../../../core/components/Button';
+import { Text } from '../../../../core/components/Text';
+import { TodoItem } from './components/TodoItem';
+import { 
+    ListContainerStyled,
+    TodoButtonsContainerStyled,
+    TodoListContainerStyled
+} from './style';
 
 const List = () => {
     const user = useMemo(() => localStorage.getItem('user'), []);
     const [todos, setTodos] = useState([]);
+    const [name, setName] = useState('');
 
     const fetchData = useCallback(async (url, method, body) => {
         const response = await fetch(url, {
@@ -29,13 +37,45 @@ const List = () => {
             });
     }, [user, fetchData, setTodos]);
 
-    console.log(todos);
+    const handleOnChangeName = useCallback((value) => {
+        setName(value);
+    }, []);
+
+    const handleOnAddNewItem = useCallback(() => {
+        setTodos([...todos, { name: name, isDone: false }])
+    }, [name, todos]);
+
+    const handleOnChangeItem = useCallback((index) => {
+        const todosItem = todos[index];
+        const firstPart = todos.slice(0, index);
+        const secondPart = todos.slice(index + 1, todos.length);
+        setTodos([
+            ...firstPart,
+            { name: todosItem.name, isDone: !todosItem.isDone },
+            ...secondPart
+        ]);
+    }, [todos]);
 
     return (
         <ListContainerStyled>
-            {todos.map((todo) => {
-                return <div>{todo.name}</div>
-            })}
+            <TodoButtonsContainerStyled>
+                <Text onChange={handleOnChangeName} />
+                <Button onClick={handleOnAddNewItem} disabled={!name.length} text='Добавить' />
+                <Button disabled={!todos.length} text='Сохранить' />
+            </TodoButtonsContainerStyled>
+            <TodoListContainerStyled>
+                {todos.map((todo, index) => {
+                    return (
+                        <TodoItem 
+                            key={index}
+                            name={todo.name}
+                            isDone={todo.isDone}
+                            onChange={() => handleOnChangeItem(index)}
+                        />
+                    )
+                })}
+            </TodoListContainerStyled>
+            
         </ListContainerStyled>
     );
 }

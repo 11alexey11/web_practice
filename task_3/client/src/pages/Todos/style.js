@@ -2,8 +2,9 @@ import styled from '@emotion/styled';
 
 export const TodosContainerStyled = styled.div({
     display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'flex-start',
+    flexDirection: 'column',
+    justifyContent: 'flex-start',
+    alignItems: 'center',
     width: '100%',
     height: '100%',
 });
