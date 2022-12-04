@@ -27,8 +27,6 @@ const List = () => {
 
         const result = await response.json();
 
-        console.log(result);
-
         return result;
     }, []);
 
@@ -69,7 +67,7 @@ const List = () => {
             .then((result) => {
                 setTodos(result.todos);
             });
-    });
+    }, [todos, user, fetchData]);
 
     return (
         <ListContainerStyled>
