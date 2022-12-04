@@ -19,6 +19,13 @@ app.post('/todos', (req, res) => {
     res.send({ todos: localStorage.getItem(user) });
 });
 
+app.put('/todos', (req, res) => {
+    const user = req.body.user;
+    const todos = req.body.todos;
+    localStorage.setItem(user, todos);
+    res.send({ todos: localStorage.getItem(user) });
+});
+
 app.listen(5000, () => {
     console.log('Server started!');
 });

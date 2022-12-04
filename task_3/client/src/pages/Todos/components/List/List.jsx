@@ -27,6 +27,8 @@ const List = () => {
 
         const result = await response.json();
 
+        console.log(result);
+
         return result;
     }, []);
 
@@ -62,12 +64,19 @@ const List = () => {
         setTodos(newTodos);
     }, [todos]);
 
+    const handleOnSaveItems = useCallback(() => {
+        fetchData('http://localhost:5000/todos', 'PUT', { user, todos })
+            .then((result) => {
+                setTodos(result.todos);
+            });
+    });
+
     return (
         <ListContainerStyled>
             <TodoButtonsContainerStyled>
                 <Text onChange={handleOnChangeName} />
                 <Button onClick={handleOnAddNewItem} disabled={!name.length} text='Добавить' />
-                <Button disabled={!todos.length} text='Сохранить' />
+                <Button onClick={handleOnSaveItems} disabled={!todos.length} text='Сохранить' />
             </TodoButtonsContainerStyled>
             <TodoListContainerStyled>
                 {todos.map((todo, index) => {
