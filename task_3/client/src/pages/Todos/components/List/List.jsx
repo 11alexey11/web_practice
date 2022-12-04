@@ -56,6 +56,12 @@ const List = () => {
         ]);
     }, [todos]);
 
+    const handleOnRemoveItem = useCallback((index) => {
+        const newTodos = todos.concat();
+        newTodos.splice(index, 1);
+        setTodos(newTodos);
+    }, [todos]);
+
     return (
         <ListContainerStyled>
             <TodoButtonsContainerStyled>
@@ -71,6 +77,7 @@ const List = () => {
                             name={todo.name}
                             isDone={todo.isDone}
                             onChange={() => handleOnChangeItem(index)}
+                            onClick={() => handleOnRemoveItem(index)}
                         />
                     )
                 })}

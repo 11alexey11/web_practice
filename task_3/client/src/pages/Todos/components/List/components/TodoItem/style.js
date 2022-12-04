@@ -8,5 +8,12 @@ export const TodoItemStyled = styled.div({
 });
 
 export const TodoHeaderStyled = styled.div({
-    fontSize: '1.6rem',
+    fontSize: '2rem',
+});
+
+export const TodoButtonsStyled = styled.div({
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    gap: '1rem',
 });
